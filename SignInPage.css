@@ -1,0 +1,169 @@
+/* Background */
+.signin-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fb;
+    padding: 20px;
+  }
+  
+  /* Card */
+  .signin-card {
+    background: #fff;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+  }
+  
+  @media (max-width: 768px) {
+    .signin-card {
+      width: 90%;
+      padding: 30px 20px;
+    }
+  }
+  
+  /* Header */
+  .signin-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  
+  .signin-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 10px 38px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: 0.2s ease;
+  }
+  .remember h5{
+    position: relative;
+    width: 200px;
+    right: 50px;
+    font-weight: 400;
+  }
+  .input-wrapper input:focus {
+    border-color: #00a3fb;
+    box-shadow: 0 0 0 2px rgba(255, 130, 172, 0.2);
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+ 
+  
+  /* Form Options */
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+  }
+  
+  .forgot-link {
+    color: #0091ff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button */
+  .signin-btn {
+    width: 100%;
+    background-color: #0383f2;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .signin-btn:hover {
+    background-color: #0004ff;
+  }
+  
+  /* Terms */
+  .terms {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+  }
+  
+  .terms a {
+    color: #444;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  /* Switch mode */
+  .switch-mode {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .switch-mode button {
+    background: none;
+    border: none;
+    color: #006eff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .switch-mode button:hover {
+    text-decoration: underline;
+  }
+  

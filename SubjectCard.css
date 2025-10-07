@@ -1,0 +1,116 @@
+/* =========================================
+   SUBJECT CARD — Modern Academic Design
+   ========================================= */
+
+   .subject-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(229, 231, 235, 0.7);
+  }
+  
+  .subject-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+  }
+  
+  /* Subtle gradient border glow on hover */
+  .subject-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(191, 219, 254, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .subject-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* ---------- ICON ---------- */
+  .subject-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #bfdbfe, #dbeafe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .subject-card:hover .subject-icon {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: scale(1.05);
+  }
+  
+  .subject-icon svg {
+    color: #2563eb;
+    transition: color 0.3s ease;
+  }
+  
+  .subject-card:hover .subject-icon svg {
+    color: #ffffff;
+  }
+  
+  /* ---------- TEXT ---------- */
+  .subject-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subject-desc {
+    color: #475569;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* ---------- LEARN MORE BUTTON ---------- */
+  .subject-link {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+  
+  .subject-link::after {
+    content: "→";
+    margin-left: 6px;
+    transition: transform 0.25s ease;
+  }
+  
+  .subject-link:hover {
+    color: #1e40af;
+  }
+  
+  .subject-link:hover::after {
+    transform: translateX(3px);
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 640px) {
+    .subject-card {
+      padding: 1.5rem;
+    }
+  
+    .subject-title {
+      font-size: 1.15rem;
+    }
+  
+    .subject-desc {
+      font-size: 0.9rem;
+    }
+  }
+  

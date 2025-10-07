@@ -1,0 +1,118 @@
+/* ===============================
+   Testimonial Card — Premium UI
+   =============================== */
+
+   .testimonial-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Subtle gradient glow on hover */
+  .testimonial-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 197, 253, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+  
+  .testimonial-card:hover::before {
+    opacity: 1;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(37, 99, 235, 0.15);
+  }
+  
+  /* Star rating */
+  .stars {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .star-icon {
+    width: 18px;
+    height: 18px;
+    color: #fbbf24;
+    fill: #fbbf24;
+    animation: starPop 0.4s ease;
+  }
+  
+  @keyframes starPop {
+    from {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Testimonial text */
+  .testimonial-text {
+    color: #374151;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* User Info */
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .avatar {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  .user-name {
+    font-weight: 600;
+    color: #1e3a8a;
+    font-size: 0.95rem;
+  }
+  
+  .user-role {
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+  
+  /* Responsive tweak */
+  @media (max-width: 640px) {
+    .testimonial-card {
+      padding: 1.25rem;
+    }
+    .testimonial-text {
+      font-size: 0.95rem;
+    }
+  }
+  

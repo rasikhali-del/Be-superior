@@ -1,0 +1,191 @@
+/* ================================
+   Tutor Signup Page Custom Styles
+   ================================ */
+
+/* Background pattern (optional aesthetic layer) */
+.tutor-bg {
+    position: relative;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    overflow: hidden;
+  }
+  
+  .tutor-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/pattern-light.svg") repeat;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  
+  /* -------------------------------
+     Card Styling (Benefits Section)
+     ------------------------------- */
+  .benefit-card {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.05);
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(30, 64, 175, 0.12);
+  }
+  
+  /* -------------------------------
+     Form Styles
+     ------------------------------- */
+  .tutor-form {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.05);
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .tutor-form:hover {
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.08);
+  }
+  
+  .tutor-form label {
+    font-size: 0.9rem;
+    color: #1e3a8a;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .tutor-form input,
+  .tutor-form textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+  
+  .tutor-form input:focus,
+  .tutor-form textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  }
+  
+  .tutor-form button {
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(37, 99, 235, 0.2);
+  }
+  
+  .tutor-form button:hover {
+    background: linear-gradient(90deg, #1e40af, #1e3a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+  }
+  
+  /* -------------------------------
+     Requirements Box
+     ------------------------------- */
+  .tutor-req {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.05);
+  }
+  
+  .tutor-req ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .tutor-req li {
+    position: relative;
+    padding-left: 1.75rem;
+    line-height: 1.6;
+    color: #374151;
+    font-size: 0.95rem;
+  }
+  
+  .tutor-req li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  /* -------------------------------
+     Toast Notification Styles
+     ------------------------------- */
+  @keyframes toast-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-15px) translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .toast {
+    animation: toast-slide-in 0.4s ease-out;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .toast-success {
+    background: rgba(34, 197, 94, 0.9);
+  }
+  
+  .toast-error {
+    background: rgba(239, 68, 68, 0.9);
+  }
+  
+  .toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: toast-progress-fill 3s linear forwards;
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+  
+  @keyframes toast-progress-fill {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  
